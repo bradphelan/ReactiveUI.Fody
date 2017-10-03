@@ -1,0 +1,7 @@
+mode: ContinuousDeployment
+next-version: 2.3.0
+branches:
+    rui8.0:
+        tag: alpha
+ignore:
+  sha: []
