@@ -1,5 +1,5 @@
-rm nuget -For -Rec -ErrorAction ignore
+rm ReactiveUI.Fody\nuget -For -Rec -ErrorAction ignore
 $version=$(gitversion /output json /showvariable FullSemVer)
-dotnet pack -o nuget /p:PackageId=Weingartner.ReactiveUI.Fody /p:Version=$version --configuration Release .\ReactiveUI.Fody\ReactiveUI.Fody.csproj
-ls ReactiveUI.Fody\nuget\ReactiveUI.Fody.$version.nupkg
+dotnet pack -o nuget /p:PackageId=Weingartner.ReactiveUI.Fody /p:Version=$version --configuration Release .\ReactiveUI.Fody.Helpers.Net45\ReactiveUI.Fody.Helpers.Net45.csproj
+ls ReactiveUI.Fody.Helpers.Net45\nuget\Weingartner.ReactiveUI.Fody.$version.nupkg
 
