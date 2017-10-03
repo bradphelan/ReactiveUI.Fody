@@ -75,7 +75,6 @@
     <Compile Include="Issues\Issue41Tests.cs" />
     <Compile Include="Issues\Issue47Tests.cs" />
     <Compile Include="ObservableAsPropertyTests.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ReactiveDependencyTests.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -100,10 +99,13 @@
   <ItemGroup>
     <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PreBuildEvent>copy $(SolutionDir)ReactiveUI.Fody\bin\$(ConfigurationName)\ReactiveUI.Fody.dll $(SolutionDir)Weavers\bin\Weavers.dll
-copy $(SolutionDir)ReactiveUI.Fody\bin\$(ConfigurationName)\ReactiveUI.Fody.pdb $(SolutionDir)Weavers\bin\Weavers.pdb</PreBuildEvent>
+    <PreBuildEvent>copy $(SolutionDir)ReactiveUI.Fody\bin\$(ConfigurationName)\net45\ReactiveUI.Fody.dll $(SolutionDir)Weavers\bin\Weavers.dll
+copy $(SolutionDir)ReactiveUI.Fody\bin\$(ConfigurationName)\net45\ReactiveUI.Fody.pdb $(SolutionDir)Weavers\bin\Weavers.pdb</PreBuildEvent>
   </PropertyGroup>
   <Import Project="..\packages\Fody.2.0.7\build\dotnet\Fody.targets" Condition="Exists('..\packages\Fody.2.0.7\build\dotnet\Fody.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

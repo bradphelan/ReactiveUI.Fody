@@ -3,7 +3,6 @@
     <TargetFramework>net45</TargetFramework>
     <AssemblyName>ReactiveUI.Fody</AssemblyName>
     <RootNamespace>ReactiveUI.Fody</RootNamespace>
-    <PackageId Condition="'$(PackageId)' == ''">ReactiveUI.Fody</PackageId>
   </PropertyGroup>
   <ItemGroup>
       <PackageReference Include="FodyCecil" version="2.0.7" />
