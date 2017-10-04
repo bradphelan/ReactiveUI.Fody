@@ -33,6 +33,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Properties\" />
+    <Content Include="..\ReactiveUI.Fody\Bin\$(ConfigurationName)\net45\ReactiveUI.Fody.dll"/>
+    <Content Include="..\ReactiveUI.Fody\Bin\$(ConfigurationName)\net45\ReactiveUI.Fody.pdb"/>
   </ItemGroup>
   <Import Project="..\ReactiveUI.Fody.Helpers\ReactiveUI.Fody.Helpers.projitems" Label="Shared" />
 </Project>
